@@ -6,7 +6,7 @@ namespace TheTestAssignmentTEST.Data
 {
     public class Url
     {
-        public static string urlSite = "";
+        public static string urlSiteEn = "https://www.google.com/";
 
     }
 }
