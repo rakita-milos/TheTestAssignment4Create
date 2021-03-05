@@ -11,8 +11,17 @@ namespace TheTestAssignmentTEST.Test
     class TestGoogleSearch : TestBase
     {
         [Test]
-        public void ValidateSearchResult()
+        public void ValidateEnSearchResult()
         {
+            PageGoogle pg = new PageGoogle(Driver.driver);
+            pg.EnterSubmitSearchText(Data.DataForTest.searchText);
+            pg.IsFirstResult4Create(Data.DataForTest.searchResult4C);
+        }
+
+        [Test]
+        public void ValidateRSSearchResult()
+        {
+            Driver.NavigateToUrl(Data.Url.urlSiteRS);
             PageGoogle pg = new PageGoogle(Driver.driver);
             pg.EnterSubmitSearchText(Data.DataForTest.searchText);
             pg.IsFirstResult4Create(Data.DataForTest.searchResult4C);

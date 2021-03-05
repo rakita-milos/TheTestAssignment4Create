@@ -71,8 +71,8 @@ namespace _4CreateObjectModel.Helpers
 
         public static void Hover(this IWebElement element)
         {
-            //Actions action = new Actions(Driver.driver);
-            //action.MoveToElement(element).Perform();
+            Actions action = new Actions(Driver.driver);
+            action.MoveToElement(element).Perform();
         }
 
         public static void EnterText(this IWebElement element, string value)
@@ -110,8 +110,8 @@ namespace _4CreateObjectModel.Helpers
 
         public static void Wait(this IWebElement element)
         {
-            //WebDriverWait wait = new WebDriverWait(Driver.driver, new TimeSpan(0, 0, 20));
-            //wait.Until(ExpectedConditions.ElementToBeClickable(element));
+            WebDriverWait wait = new WebDriverWait(Driver.driver, new TimeSpan(0, 0, 20));
+            wait.Until(ExpectedConditions.ElementToBeClickable(element));
         }
 
         public static void CbIsCheck(this IWebElement cb, bool isActiveEmpl)
