@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
-using TheTestAssignmentTEST.Data;
+using TheTestAssignmentTEST.Helpers;
 
 namespace TheTestAssignmentTEST.Pages
 {
@@ -43,7 +43,7 @@ namespace TheTestAssignmentTEST.Pages
 
         public void ClickOnSignIn()
         {
-            Helpers.BtnJsClick(btnSignIn);
+            Helper.BtnJsClick(btnSignIn);
             //btnSignIn.Click();
         }
         
@@ -51,18 +51,16 @@ namespace TheTestAssignmentTEST.Pages
         {
             tbEmail.Click();
             tbEmail.SendKeys(email);
-            Helpers.BtnJsClick(btnNextEm);
+            Helper.BtnJsClick(btnNextEm);
             Drivers.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             tbPassword.Click();
             tbPassword.SendKeys(password);
             btnNextPass.Click();
         }
-
         
-
         public void ClickOnGmail()
         {
-            Helpers.BtnJsClick(btnGmail);
+            Helper.BtnJsClick(btnGmail);
         }
 
         #endregion

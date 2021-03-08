@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TestProject.Common.Enums;
+﻿using TestProject.Common.Enums;
 using TestProject.SDK;
 
-namespace TheTestAssignmentTEST.Data
+namespace TheTestAssignmentTEST.Helpers
 {
     public class TestProjectHelper
     {

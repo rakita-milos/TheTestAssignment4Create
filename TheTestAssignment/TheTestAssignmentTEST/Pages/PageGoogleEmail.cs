@@ -1,12 +1,11 @@
 ﻿using OpenQA.Selenium;
 using System;
-using TheTestAssignmentTEST.Data;
+using TheTestAssignmentTEST.Helpers;
 
 namespace TheTestAssignmentTEST.Pages
 {
     public class PageGoogleEmail
     {
-        
         public void TestGmail(IWebDriver _driver)
         {
             _driver = Drivers.driver;
@@ -36,8 +35,8 @@ namespace TheTestAssignmentTEST.Pages
 
         public void SignOutFromGmail()
         {
-            Helpers.BtnJsClick(btnUserProfil);
-            Helpers.BtnJsClick(btnSignOut);
+            Helper.BtnJsClick(btnUserProfil);
+            Helper.BtnJsClick(btnSignOut);
         }
         #endregion
     }

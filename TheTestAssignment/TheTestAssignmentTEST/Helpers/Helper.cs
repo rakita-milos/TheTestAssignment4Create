@@ -1,11 +1,9 @@
 ﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace TheTestAssignmentTEST.Data
+namespace TheTestAssignmentTEST.Helpers
 {
-    public class Helpers
+    public class Helper
     {
         public static void BtnJsClick(IWebElement btn)
         {

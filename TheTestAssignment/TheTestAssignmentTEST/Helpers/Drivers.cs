@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace TheTestAssignmentTEST.Data
+namespace TheTestAssignmentTEST.Helpers
 {
     public class Drivers
     {

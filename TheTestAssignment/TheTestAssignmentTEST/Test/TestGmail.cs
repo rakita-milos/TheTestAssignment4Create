@@ -1,7 +1,5 @@
 ﻿using NUnit.Framework;
-using TestProject.Common.Enums;
-using TestProject.SDK;
-using TheTestAssignmentTEST.Data;
+using TheTestAssignmentTEST.Helpers;
 
 namespace TheTestAssignmentTEST.Test
 {
@@ -15,8 +13,5 @@ namespace TheTestAssignmentTEST.Test
         }
 
     }
-
-
-
-    }
+}
 

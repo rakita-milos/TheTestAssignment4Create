@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using TheTestAssignmentTEST.Data;
+using TheTestAssignmentTEST.Helpers;
 using TheTestAssignmentTEST.Test.TestHelpers;
 
 namespace TheTestAssignmentTEST.Test
@@ -18,6 +18,5 @@ namespace TheTestAssignmentTEST.Test
         {
             TestProjectHelper.runner.Run(new ValidateRSSearchResultClass());
         }
-
     }
 }

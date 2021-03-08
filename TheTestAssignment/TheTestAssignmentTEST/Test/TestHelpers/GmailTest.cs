@@ -2,7 +2,7 @@
 using TestProject.SDK;
 using TestProject.SDK.Tests;
 using TestProject.SDK.Tests.Helpers;
-using TheTestAssignmentTEST.Data;
+using TheTestAssignmentTEST.Helpers;
 using TheTestAssignmentTEST.Pages;
 
 namespace TheTestAssignmentTEST.Test
