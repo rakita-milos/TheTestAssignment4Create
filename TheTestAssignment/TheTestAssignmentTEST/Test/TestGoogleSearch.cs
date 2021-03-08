@@ -1,9 +1,6 @@
-﻿using _4CreateObjectModel.Drivers;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using TheTestAssignmentTEST.Pages;
+﻿using NUnit.Framework;
+using TheTestAssignmentTEST.Data;
+using TheTestAssignmentTEST.Test.TestHelpers;
 
 namespace TheTestAssignmentTEST.Test
 {
@@ -13,18 +10,13 @@ namespace TheTestAssignmentTEST.Test
         [Test]
         public void ValidateEnSearchResult()
         {
-            PageGoogle pg = new PageGoogle(Driver.driver);
-            pg.EnterSubmitSearchText(Data.DataForTest.searchText);
-            pg.IsFirstResult4Create(Data.DataForTest.searchResult4C);
+            TestProjectHelper.runner.Run(new ValidateEnSearchResultClass());
         }
 
         [Test]
         public void ValidateRSSearchResult()
         {
-            Driver.NavigateToUrl(Data.Url.urlSiteRS);
-            PageGoogle pg = new PageGoogle(Driver.driver);
-            pg.EnterSubmitSearchText(Data.DataForTest.searchText);
-            pg.IsFirstResult4Create(Data.DataForTest.searchResult4C);
+            TestProjectHelper.runner.Run(new ValidateRSSearchResultClass());
         }
 
     }

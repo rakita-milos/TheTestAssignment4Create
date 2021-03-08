@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
 
-namespace _4CreateObjectModel.Drivers
+namespace TheTestAssignmentTEST.Data
 {
-    public class Driver
+    public class Drivers
     {
         public static IWebDriver driver;
 
@@ -18,8 +18,7 @@ namespace _4CreateObjectModel.Drivers
 
         public static void ScrollToTheTop()
         {
-            ((IJavaScriptExecutor)Driver.driver).ExecuteScript("window.scrollBy(0,-10000)");
+            ((IJavaScriptExecutor)Drivers.driver).ExecuteScript("window.scrollBy(0,-10000)");
         }
-
     }
 }

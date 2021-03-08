@@ -1,6 +1,7 @@
-﻿using _4CreateObjectModel.Drivers;
-using NUnit.Framework;
-using TheTestAssignmentTEST.Pages;
+﻿using NUnit.Framework;
+using TestProject.Common.Enums;
+using TestProject.SDK;
+using TheTestAssignmentTEST.Data;
 
 namespace TheTestAssignmentTEST.Test
 {
@@ -10,14 +11,12 @@ namespace TheTestAssignmentTEST.Test
         [Test]
         public void VerifyNumberUnreadEmail()
         {
-            PageGoogle pg = new PageGoogle(Driver.driver);
-            pg.ClickOnSignIn();
-            pg.SignInToGMail(Data.DataForTest.username, Data.DataForTest.password);
-            pg.ClickOnGmail();
-
+            TestProjectHelper.runner.Run(new GmailTest());
         }
+
+    }
 
 
 
     }
-}
+

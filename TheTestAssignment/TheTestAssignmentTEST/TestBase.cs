@@ -1,17 +1,13 @@
-﻿using _4CreateObjectModel.Drivers;
-using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.IE;
-using System;
-using System.IO;
-using System.Reflection;
+﻿using NUnit.Framework;
+using TestProject.Common.Enums;
+using TestProject.SDK;
+using TheTestAssignmentTEST.Data;
 
 namespace TheTestAssignmentTEST
 {
-    public class TestBase
+    public class TestBase 
     {
-
+        
         [SetUp]
         public void SetUp()
         {
@@ -19,16 +15,23 @@ namespace TheTestAssignmentTEST
 
             //Driver.driver = new FirefoxDriver(Environment.CurrentDirectory);
             //Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-            Driver.driver = new InternetExplorerDriver(".");
-            Driver.driver.Manage().Window.Maximize();
-            Driver.NavigateToUrl(Data.Url.urlSiteEn);
-            Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            //radi
+            //Driver.driver = new InternetExplorerDriver(".");
+            //Driver.driver.Manage().Window.Maximize();
+            //Driver.NavigateToUrl(Data.Url.urlSiteEn);
+            //Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            TestProjectHelper.runner = new RunnerBuilder(TestProjectHelper.DevToken).AsWeb(AutomatedBrowserType.InternetExplorer).Build();
+
         }
 
         [TearDown]
         public void TearDown()
         {
-            Driver.driver.Close();
+            TestProjectHelper.runner.Dispose();
+
+            //Driver.driver.Close();
         }
 
     }
